@@ -94,27 +94,44 @@ No arquivo `pom.xml`, adicione as dependências necessárias para o Hibernate e 
 
 ```xml
 <dependencies>
-    <!-- Hibernate Core -->
-    <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-core</artifactId>
-        <version>5.4.32.Final</version>
-    </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.23</version>
+        </dependency>
 
-    <!-- PostgreSQL JDBC Driver -->
-    <dependency>
-        <groupId>org.postgresql</groupId>
-        <artifactId>postgresql</artifactId>
-        <version>42.2.5</version>
-    </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.4.33.Final</version>
+        </dependency>
 
-    <!-- JUnit for testing (opcional) -->
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.13.1</version>
-        <scope>test</scope>
-    </dependency>
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.7.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.7.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>3.7.7</version>
+            <scope>test</scope>
+        </dependency>
 </dependencies>
 ```
 
@@ -169,6 +186,18 @@ ClientesCrud/
   - **View**: A interação com o usuário é feita via terminal utilizando `Scanner`.
   - **Controller**: A classe `ClienteController` gerencia as operações de CRUD no modelo de cliente.
   - **DAO**: A classe `ClienteDAO` é responsável pela interação com o banco de dados utilizando Hibernate.
+ 
+
+## Testes Automatizados
+
+O sistema conta com uma suíte de testes automatizados utilizando **JUnit** e **Mockito** para garantir a confiabilidade das operações. Os testes são realizados sobre o controlador `ClienteController`, verificando as funcionalidades de **adicionar**, **atualizar**, **excluir** e **listar clientes**. Além disso, também são testadas situações de erro, como CPF inválido e cliente já existente.
+
+### Principais Casos de Teste:
+
+- **Adicionar Cliente**: Verifica a criação de um novo cliente, incluindo validações como CPF válido e cliente não existente.
+- **Atualizar Cliente**: Testa a atualização de um cliente existente, garantindo que os dados sejam corretamente alterados.
+- **Excluir Cliente**: Verifica a exclusão de um cliente do banco de dados.
+- **Listar Clientes**: Testa o retorno correto da lista de todos os clientes cadastrados.
 
 
 ## Licença
