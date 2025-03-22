@@ -85,8 +85,7 @@ Edite o arquivo `hibernate.cfg.xml` localizado no diretório `src/main/resources
 Clone o repositório para sua máquina local:
 
 ```bash
-git clone https://github.com/seu-usuario/sistema-cadastro-clientes.git
-cd sistema-cadastro-clientes
+git clone https://github.com/becastellani/ClientesCrud.git
 ```
 
 ### Passo 4: Adicionar Dependências do Maven
