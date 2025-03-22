@@ -135,7 +135,7 @@ O sistema será executado no terminal e você poderá interagir com ele conforme
 O projeto está organizado da seguinte forma:
 
 ```
-sistema-cadastro-clientes/
+ClientesCrud/
 │
 ├── src/
 │   ├── main/
