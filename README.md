@@ -153,7 +153,7 @@ sistema-cadastro-clientes/
 │   │   │   │   │       └── HibernateUtil.java  # Utilitário para configurar e gerenciar a sessão Hibernate
 │   │   └── resources/  # Arquivo de configuração Hibernate (hibernate.cfg.xml)
 ├── pom.xml              # Arquivo de configuração Maven
-└── README.md            # Este arquivo
+└── README.md           
 ```
 
 ## Explicação das Escolhas Técnicas
