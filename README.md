@@ -16,6 +16,8 @@ Este é um sistema de cadastro de clientes desenvolvido em Java 8, utilizando Hi
 - **PostgreSQL**: Banco de dados relacional utilizado para armazenar os dados dos clientes.
 - **JDBC**: Usado pelo Hibernate para a conexão com o banco de dados.
 - **Maven**: Para gerenciamento de dependências e build do projeto.
+- **JUnit**: Framework utilizado para escrever e rodar os testes automatizados.
+- **Mockito**: Framework utilizado para criar mocks e testar a interação com dependências externas.
 
 ## Pré-requisitos
 
